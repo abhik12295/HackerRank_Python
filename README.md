@@ -1,1 +1,1 @@
-# Hackerrank_30days_Python
+# HackerRank Python 30 Days Challenge
