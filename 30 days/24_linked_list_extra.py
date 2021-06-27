@@ -23,19 +23,19 @@ class Solution:
 
     def removeDuplicates(self,head):
         #Write your code here
+        if head is None:
+            return
+        temp = head
+        while temp.next != None:
+            if temp.data == temp.next.data:
+                shift = temp.next.next
+                temp.next = None
+                temp.next = shift
+            else:
+                temp = temp.next
+        return head
 
-        a=[]
-        if head==None:
-            return head
-        current=head
-        while current:
-            a.append(current.data)
-            current=current.next
-        z = set(a)
-        p=list(z)
-        y = sorted(p)
-        print(y)
-        print(' '.join(str(i) for i in y))
+        
 
 mylist= Solution()
 T=int(input())
